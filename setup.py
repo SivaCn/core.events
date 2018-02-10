@@ -40,8 +40,9 @@ setup(
     install_requires=[],
 
     entry_points={
-        # 'console_scripts': [
-        #     '<script-name>=<module>:main',
-        # ],
+        'console_scripts': [
+            'event_emittor=core.events.message_broker.rabbitmq:event_emittor',
+            'event_listener=core.events.message_broker.rabbitmq:event_listener',
+        ],
     },
 )
